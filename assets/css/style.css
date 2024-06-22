@@ -841,7 +841,21 @@ p.readMore{
         background-image: url("../img/hero/heroLarge/KalenderHeroL.jpg")
     }
 
+    .navPoints a:hover{
+        transform: scale(1.2);
+        color: var(--InteractiveColor);
+        transition: transform 0.3s ease;
+    }
     
+    /* For at kunne få vores element til at skifte farve laver vi et pseudo element oveni det, som har den ønskede farve */
+    .entryPoint:hover::before{
+        background-color: rgba(211, 65, 52, 0.5) ;
+    }
+    
+    .entryPoint:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
     
 
     /* Main */
