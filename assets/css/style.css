@@ -1,0 +1,1183 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+h1, h2, h3, h4, h5, h6, p, a, button{
+    font-family: 'Mulish';
+}
+h1{
+    font-size: 2rem;
+    font-weight: var(--boldWeight);
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: var(--boldWeight);
+}
+h3{
+    font-size: 1rem;
+    font-weight: var(--boldWeight);
+}
+p, li{
+    font-size: 1rem;
+    font-weight: var(--regularWeight);
+    color: var(--textColor);
+    line-height: 1.5rem;
+}
+
+/* Defaults */
+*{
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+main{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.desktopImg{
+    display: none;
+}
+#imgHideUnset{
+    display: unset;
+}
+.fullBodyImg{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Distances */
+main *{
+    margin-top: var(--generalDistance);
+    margin-bottom: var(--generalDistance);
+}
+section{
+    margin-top: var(--sectionDistance);
+    margin-bottom: var(--sectionDistance);
+}
+img{
+    margin: 0;
+}
+
+:root {
+    /* Colors */
+    --primaryColor: #293163;
+    --InteractiveColor: #D34134;
+    --backgroundColor: #FCFDFF;
+    --textColor: #080a14;
+    --mutedTextColor: #535a80;
+    --highlightColor: #780B01;
+    --gradientColor: rgba(8, 10, 20, 0.35);
+
+    /* Distance */
+    --sectionDistance: 25px;
+    --generalDistance: 15px;
+
+    /* Typography Weight */
+    --regularWeight: 400;
+    --semiBold: 600;
+    --boldWeight: 700;
+    --xBoldWeight: 800;
+}
+
+/* Logo */
+.logo{
+    height: 70px;
+    margin: 5px;
+}
+
+/* Navigation */
+nav{
+    background-color: var(--primaryColor);
+    height: 80px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+#current{
+    text-decoration: underline 3px;
+    text-underline-offset: 10px;
+}
+nav img.logo{
+    margin-left: 5vw;
+}
+.mobileOpenMenu{
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5vw;
+}
+.mobileCloseMenu{
+    font-size: 50px;
+    position: absolute;
+    top: 10px;
+    right: 5vw;
+    margin-right: 3.125px;
+    margin-left: 3.125px;
+}
+.navPoints{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--primaryColor);
+    display: none;
+    flex-direction: column;
+    width: 70vw;
+    /* transform: translate(100%); */
+    transition: 300ms ease-in-out;
+    z-index: 3;
+}
+.jsMenuToggle{
+    display: flex;
+}
+.navPoints a{
+    font-size: 1.5rem;
+    font-weight: var(--regularWeight);
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    transition: 0.3s;
+}
+.navPoints a:nth-child(2){
+    margin-top: 80px;
+}
+header i{
+    color: white;
+}
+.navPoints a:hover{
+    font-weight: var(--boldWeight);
+}
+
+/* Hero */
+.hero{
+    height: 85px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradientColor);
+    z-index: 1;
+}
+.hero h1{
+    color: white;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+#forsideHero{
+    background-image: url("../img/hero/ForsideHero.jpg");
+    height: 125px;
+}
+#forsideHero h1{
+    font-size: 2.5rem;
+}
+#omGardenHero{
+    background-image: url("../img/hero/OmGardenHero.jpg");
+}
+#bookingHero{
+    background-image: url("../img/hero/BookingHero.jpg");
+}
+#blivGardistHero{
+    background-image: url("../img/hero/BlivGardistHero.jpg");
+}
+#nyhederHero{
+    background-image: url("../img/hero/NyhederHero.jpg");
+}
+#arkivHero{
+    background-image: url("../img/hero/ArkivHero.jpg");
+}
+#ledelseHero{
+    background-image: url("../img/hero/LedelseHero.jpg");
+}
+#sponsorerHero{
+    background-image: url("../img/hero/SponsorerHero.jpg");
+}
+#kalenderHero{
+    background-image: url("../img/hero/KalenderHero.jpg"); 
+}
+
+/* Button */
+.buttonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--sectionDistance);
+}
+.buttonContainer a{
+    margin: 0;
+}
+button{
+    background-color: var(--InteractiveColor);
+    border: none;
+    border-radius: 25px;
+    font-weight: var(--xBoldWeight);
+    height: 40px;
+    width: 175px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: var(--highlightColor)
+}
+a button{
+    text-decoration: none;
+    color: white;
+}
+
+/* Focused Entry Points */
+.focusEntryPoints{
+    display: flex;
+    flex-direction: column;
+    gap: var(--generalDistance);
+}
+.focusEntryPoints *{
+    margin: 0px;
+}
+.focusEntryPoints a{
+    text-decoration: none;
+}
+.entryPoint{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    padding: var(--generalDistance);
+}
+.entryPoint::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(83, 90, 128, 0.35);
+    z-index: 1;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.entryPoint:hover::before {
+    background: rgba(83, 90, 128, 0.75);
+}
+.entryPoint i{
+    color: white;
+    font-size: 50px;
+    z-index: 2;
+    margin: 0;
+}
+.entryPoint p{
+    color: white;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    font-weight: var(--boldWeight);
+}
+#omGardenFEP{
+    background-image: url("../img/hero/OmGardenHero.jpg");
+}
+#bookingFEP{
+    background-image: url("../img/hero/BookingHero.jpg");
+}
+#blivGardistFEP{
+    background-image: url("../img/hero/BlivGardistHero.jpg");
+}
+#korpseneFEP{
+    background-image: url("../img/omGarden/korps.jpg");
+}
+#agHistorieFEP{
+    background-image: url("../img/omGarden/aGHistorie.jpg");
+}
+
+/* Footer */
+footer{
+    background-color: var(--primaryColor);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+footer .logo{
+    margin: 5px;
+}
+footer p{
+    font-size: 0.75rem;
+    margin: 5px 5px 5px 0;
+    color: white;
+    line-height: 1rem;
+    align-items: center;
+}
+.adresse{
+    display: flex;
+}
+footer i{
+    color: white;
+    font-size: 35px;
+    margin: 5px;
+}
+footer .soMeContainer{
+    display: flex;
+    justify-content: space-between;
+}
+br{
+    margin: 0;
+}
+
+footer .logo{
+    margin-left: 5vw;
+}
+footer .soMe{
+    margin-right: 5vw;
+    margin-top: 5px;
+}
+
+/* Defaults end */
+
+/* Index */
+/* Fedt */
+.fedt{
+    background-color: var(--primaryColor); 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(-5vw);
+    width: 100vw;
+}
+.fedt p{
+    color: white;
+    font-weight: 700;
+    margin: 0;
+    line-height: 4rem;
+}
+.fedt span{
+    font-size: 4rem;
+    margin: 0;
+}
+.fedtContainer{
+    display: flex;
+    flex-direction: column;
+}
+.fedtContainer p{
+    display: inline-block;
+}
+
+/* Calendar */
+.headerCentered{
+   text-align: center; 
+}
+.calendar h3{
+    color: var(--mutedTextColor);
+}
+.calendarContainer article a{
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    box-shadow: 2px 2px 20px;
+    text-decoration: none;
+    color: var(--textColor);
+    transition: 0.3s;
+}
+.calendarContainer article a:hover{
+    box-shadow: 4px 4px 40px;
+}
+.time, .place{
+    display: flex;
+    align-items: center;
+}
+.calendarContainer article i{
+    color: var(--mutedTextColor);
+    font-size: 1rem;
+    width: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.dateContainer{
+    background-color: #D3D6DF;
+    padding: 15px;
+    border-radius: 5px;
+    min-width: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dateContainer p{
+    margin: 0;
+    text-align: center;
+}
+.weekday{
+    font-size: 1rem;
+    color: var(--mutedTextColor);
+}
+.date{
+    font-weight: var(--xBoldWeight);
+    font-size: 2rem;
+    color: var(--mutedTextColor);
+}
+.time p, .place p, .remark span{
+    color: var(--mutedTextColor);
+}
+.calendarContainer h4{
+    font-size: 1rem;
+}
+.time, .place{
+    display: flex;
+}
+.calendar article *{
+    margin: 0;
+}
+.calendarContainer .eventInfoContainer{
+    margin-left: var(--generalDistance);
+}
+.timePlaceContainer p{
+    margin-left: 5px;
+}
+div.articleTitle{
+    margin-bottom: 10px;
+}
+
+/* News */
+.news article a{
+    border-radius: 10px;
+    padding: var(--generalDistance);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--textColor);
+    transition: 0.3s;
+}
+.news article a:hover{
+    box-shadow: 4px 4px 40px;
+    p.readMore{
+        color: var(--highlightColor);
+    }
+}
+.news img{
+    border-radius: 5px;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.newsInfo{
+    margin: 0;
+    margin-left: var(--generalDistance);
+}
+.newsInfo p, .newsInfo h3{
+    margin: 0;
+    font-weight: var(--regularWeight);
+}
+.newsInfo p{
+    font-size: 0.75rem;
+    color: var(--mutedTextColor);
+}
+.newsImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Social Medias */
+div.soMeContainer{
+    display: flex;
+    justify-content: space-between;
+}
+main .soMeContainer i{
+    color: var(--InteractiveColor);
+    font-size: 50px;
+    margin: 0;
+    transition: 0.3s;
+}
+main .soMeContainer i:hover{
+    color: var(--highlightColor);
+}
+.soMeContainer *{
+    margin: 0;
+}
+/* Index end */
+
+/* Korpsene */
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+    margin: 0;
+}
+.listAttach{
+    margin-bottom: 0;
+}
+.return{
+    display: none;
+}
+.return a{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+    margin-top: var(--sectionDistance);
+}
+.return *{
+    margin: 0;
+    margin-right: 5px;
+    color: var(--textColor);
+}
+/* Korpsene End */
+
+/* Booking */
+.bookingIntro p{
+    font-weight: var(--boldWeight);
+}
+.contactInfo{
+    font-weight: var(--boldWeight);
+}
+.contactInfo span{
+    color: var(--InteractiveColor);
+    text-decoration: underline;
+}
+/* Booking end */
+
+/* Bliv Gardist */
+.gardistsPrinciples{
+    font-weight: var(--semiBold);
+}
+.priceContainer h3{
+    margin-bottom: 10px;
+}
+.priceContainer p{
+    margin-top: 10px;
+}
+#blivGardistButtonContainer{
+    gap: var(--generalDistance);
+}
+/* Bliv Gardist End */
+
+/* Undervisning */
+#undervisningImgHeight img{
+    height: 50vh;
+}
+/* Undervisning End*/
+
+/* Nyheder */
+.newsBig{
+    box-shadow: 2px 2px 20px;
+    border-radius: 10px;
+}
+.newsBig img{
+    border-radius: 10px;
+    height: 20vw;
+    object-fit: cover;
+}
+.newsBig a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.articleContent{
+    padding: var(--generalDistance);
+    margin: 0;
+}
+.articleContent p, .articleContent h2{
+    margin: 0;
+}
+p.readMore{
+    color: var(--InteractiveColor);
+    font-weight: var(--xBoldWeight);
+    text-align: center;
+    margin-top: var(--generalDistance);
+    transition: 0.3s;
+}
+.desktopDevider p.readMore{
+    text-align: start;
+}
+/* Nyheder End */
+
+/* Nyhed Focused */
+.authorDateContainer{
+    display: flex;
+    gap: var(--generalDistance);
+}
+.authorDateContainer p{
+    margin: 0;
+}
+/* Nyhed Focused End */
+
+/* Arkiv */
+.competitionRecent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--generalDistance);
+}
+.competitionRecent a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.competitionRecent img{
+    height: 50vw;
+    /* padding: var(--generalDistance); */
+}
+.archiveCompetitionContainer a{
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px;
+    padding: var(--generalDistance);
+    margin-bottom: 0;
+}
+.archiveCompetitionContainer h3{
+    margin: 0;
+    margin-bottom: var(--generalDistance);
+}
+.archive h2{
+    text-align: center;
+}
+/* Arkiv End */
+
+/* Galleri */
+    .galleryImgContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .galleryImgContainer img{
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .competitionRecent h3{
+        margin-top: 0;
+    }
+    .competitionRecent a{
+        margin-top: 0;
+    }
+/* Galleri End */
+
+/* Album */
+.albumContainer{
+    display: grid;
+    gap: var(--generalDistance);
+}
+.albumContainer img{
+    height: 300px;
+}
+/* Album End */
+
+/* Konkurrence Placeringer */
+.competitionContainerSuper{
+    display: grid;
+    gap: var(--generalDistance);
+}
+.competitionContainer .logoContain{
+    object-fit: contain;
+}
+
+/* Konkurrence Placeringer End */
+
+/* Ledelse */
+.ledelseContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--generalDistance);
+}
+.ledelseSuper img{
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+    height: 50vw;
+}
+.ledelseSuper p{
+    margin: 0;
+}
+.ledelseSuper h3{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.email{    
+    word-break: break-all;
+}
+/* Ledelse End */
+
+/* Sponsorer */
+.sponsorInfo{
+    margin-bottom: 50px;
+}
+.sponsorInfo h2, .sponsorInfo p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.sponsorInfo img{
+    object-fit: contain;
+}
+
+.sponsorContainer{
+    display: grid;
+    gap: var(--generalDistance);
+}
+/* Sponsorer End */
+
+/* Calendar */
+    .calendar h2{
+        text-align: center;
+        margin-top: var(--sectionDistance);
+    }
+/* Calendor End */
+
+@media screen and (min-width: 500px) {
+    .articleDetails{
+        display: flex;
+        gap: var(--generalDistance);
+    }
+    div.soMeContainer{
+        justify-content: unset;
+        gap: 5vw;
+    }
+}
+/* Media Queries */
+@media screen and (min-width: 900px) {
+    /* Defaults */
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .articleTitle h4{
+        font-size: 1.5rem;
+    }
+    p, li{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    footer p{
+        font-size: 1rem;
+    }
+    :root{
+        --sectionDistance: 50px;
+        --generalDistance: 25px;
+    }
+
+    /* Navigation */
+    nav img.logo{
+        margin-left: 10vw;
+    }
+    .navPoints a{
+        font-size: 1rem;
+    }
+    nav .mobileOpenMenu, nav .mobileCloseMenu {
+        display: none;
+    }
+    .navPoints{
+        transform: translateX(0);
+        width: unset;
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    .navPoints a{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .navPoints a:nth-child(2){
+        margin-top: unset;
+    }
+    .navPoints a:last-child{
+        margin-right: 10vw;
+    }
+
+    /* Hero */
+    .hero{
+        height: 300px;
+    }
+    #frontPageH1{
+        font-size: 4rem;
+    }
+
+    #forsideHero{
+        background-image: url("../img/hero/heroLarge/ForsideHeroL.jpg");
+        height: 400px;
+    }
+    #forsideHero h1{
+        font-size: 2.5rem;
+    }
+    #omGardenHero{
+        background-image: url("../img/hero/heroLarge/OmGardenHeroL.jpg");
+    }
+    #bookingHero{
+        background-image: url("../img/hero/heroLarge/BookingHeroL.jpg");
+    }
+    #blivGardistHero{
+        background-image: url("../img/hero/heroLarge/BlivGardistHeroL.jpg");
+    }
+    #nyhederHero{
+        background-image: url("../img/hero/heroLarge/NyhederHeroL.jpg");
+    }
+    #arkivHero{
+        background-image: url("../img/hero/heroLarge/ArkivHeroL.jpg");
+    }
+    #ledelseHero{
+        background-image: url("../img/hero/heroLarge/LedelseHeroL.jpg");
+    }
+    #sponsorerHero{
+        background-image: url("../img/hero/heroLarge/SponsorerHeroL.jpg");
+    }
+    #kalenderHero{
+        background-image: url("../img/hero/heroLarge/KalenderHeroL.jpg")
+    }
+
+    
+    
+
+    /* Main */
+    main{
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    /* Button */
+    button{
+        padding: 10px 60px;
+        height: 80px;
+        width: 300px;
+        font-size: 1.5rem;
+        border-radius: 40px;
+    }
+
+    /* Footer */
+    footer .logo{
+        height: 80px;
+    }
+    footer .logo{
+        margin-left: 10vw;
+    }
+    footer .soMe{
+        margin-right: 10vw;
+        margin-top: 10px;
+    }
+
+    /* Return */
+    .return{
+        display: unset;
+    }
+
+    /* Focus Entry Points */
+    .focusEntryPoints{
+        display: grid;
+        gap: var(--generalDistance);
+    }
+    #indexFEP{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #omGardenPageFEP{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Index */
+    /* Fedt */
+    .fedt{
+        transform: translate(-10vw);
+    }
+    .fedtContainer{
+        flex-direction: row;
+        gap: var(--generalDistance);
+    }
+    /* Calendar */
+    .articleDetails div:nth-child(2){
+        margin-top: 10px;
+    }
+    .calendarContainer article i{
+        font-size: 1.5rem;
+        width: 1.5rem;
+    }
+    /* News */
+    .news img{
+        height: 104px;
+        width: 104px;
+    }
+    .newsInfo p{
+        font-size: 1rem;
+    }
+    /* Index End */
+
+    /* Galleri */
+    .galleryImgContainer img{
+        height: 200px;
+    }
+    /* Galleri End */
+
+    /* Album */
+    .albumContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .competitionContainer img{
+        height: 40vw;
+        object-fit: cover;
+    }
+    /* Album End */
+
+    /* Konkurrence Placeringer */
+    .competitionContainerSuper{
+        display: grid;
+        gap: var(--generalDistance);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .competitionContainerSuper .competitionContainer img{
+        height: 25vw;
+    }
+    /* Konkurrence Placeringer End */
+
+    /* Ledelse */
+    .ledelseSuper img{
+        height: 40vw;
+    }
+    /* Ledelse End */
+
+    .sponsorContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sponsorInfo img{
+        height: 20vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    /* Main */
+    main{
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    /* Navigation */
+    nav img.logo{
+        margin-left: 15vw;
+    }
+    .navPoints a:last-child{
+        margin-right: 15vw;
+    }
+
+    /* Footer */
+    footer .logo{
+        margin-left: 15vw;
+    }
+    .soMe{
+        margin-right: 15vw;
+    }
+
+    /* Image hider */
+    .desktopImg{
+        display: unset;
+    }
+    .mobileImg{
+        display: none;
+    }
+
+    /* Index */
+    .fedt{
+        transform: translate(-15vw);
+    }
+    .desktopDevider{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .calendarContainer{
+        display: grid;
+        gap: var(--generalDistance);
+    }
+
+    .articleDetails{
+        display: unset;
+        gap: var(--generalDistance);
+    }
+    section.calendar, section.news{
+        margin-top: 0;
+    }
+    section.calendar h2, section.news h2{
+        margin-top: 0;
+    }
+    /* Index End */
+
+    /* Calendar */
+    .calendarMain .calendarContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .calendarMain .calendar{
+        margin-top: var(--sectionDistance);
+    }
+    .calendarContainer article{
+        margin: 0; 
+    } 
+    /* Calendar End*/
+
+    /* Om Garden */
+    .desktopLayout{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .desktopLayout p, .desktopLayout h2{
+        margin-top: 0;
+    }
+    .desktopImg{
+        margin-top: 0;
+    }
+    .desktopImg img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .imgContainer{
+        gap: var(--generalDistance);
+        margin: 0;
+    }
+    .imgContainer .desktopImg img{
+        height: 50%;
+        margin-bottom: var(--generalDistance);
+    }
+    /* Om Garden End */
+
+    /* Korpsene */
+    .contentContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .contentContainer img{
+        height: 100%;
+        object-fit: cover;
+    }
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: var(--generalDistance);
+    }
+    .contentContainer .textContainer p, .textContainer, .textContainer h3{
+        margin: 0;
+    }
+    /* Korpsene End */
+
+    /* AG Historie */
+    .desktopImg{
+        margin: 0;
+    }
+    /* AG Historie End */
+
+    /* Booking */
+    .bookingText{
+        margin: 0;
+    }
+    p.contactInfo{
+        margin: 0;
+    }
+    p.contactInfo span{
+        margin: 0;
+    }
+    /* Booking End */
+
+    /* Bliv Gardist */
+    .priceContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .priceContainer *{
+        margin: 0;
+        text-align: center;
+    }
+    img.fullBodyImg.blivGardistDesktop{
+        height: 100%;
+    }
+
+    /* Bliv Gardist End */
+
+    /* Undervisning */
+    #undervisningImgHeight{
+        max-height: 100%;
+    }
+    #undervisningImgHeight img{
+        height: 70vh;
+        max-height: unset;
+        object-fit: cover;
+        width: 100%;
+    }
+    /* Undervisning End */
+
+    /* Nyheder */
+    section.nyhedContainer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--generalDistance);
+    }
+    .newsBig{
+        margin: 0;
+    }
+    .imgContainer img{
+        height: 50%;
+    }
+    /* Nyheder End */
+    
+    /* Nyhed Focused */
+
+    /* Arkiv */
+    .competitionRecent{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .competitionRecent img{
+        height: 25vw;
+    }
+    /* Arkiv End */
+    
+    /* Galleri */
+    .galleryImgContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .galleryImgContainer img{
+        height: 300px;
+    }
+    /* Galleri End */
+
+    /* Album */
+    .albumContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* Album End */
+
+    /* Ledelse */
+    .ledelseContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .ledelseSuper img{
+        height: 20vw;
+    }
+    /* Ledelse End*/
+
+    /* Sponsorer */
+    .sponsorContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* Sponsorer End */
+}
+
+@media screen and (min-width: 1600px) {
+    .articleDetails{
+        display: flex;
+        /* gap: var(--generalDistance); */
+    }
+}
