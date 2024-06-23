@@ -126,6 +126,7 @@ nav img.logo{
     /* transform: translate(100%); */
     transition: 300ms ease-in-out;
     z-index: 3;
+    transition: transform 0.3s
 }
 .jsMenuToggle{
     display: flex;
@@ -261,6 +262,7 @@ a button{
     position: relative;
     border-radius: 10px;
     padding: var(--generalDistance);
+    transition: 0.3s
 }
 .entryPoint::before {
     content: "";
@@ -273,9 +275,6 @@ a button{
     z-index: 1;
     border-radius: 10px;
     transition: 0.3s;
-}
-.entryPoint:hover::before {
-    background: rgba(83, 90, 128, 0.75);
 }
 .entryPoint i{
     color: white;
@@ -349,6 +348,19 @@ footer .soMe{
 }
 
 /* Defaults end */
+
+/* For at kunne få vores element til at skifte farve laver vi et pseudo element oveni det, som har den ønskede farve */
+.entryPoint:hover::before{
+    background-color: rgba(211, 65, 52, 0.5) ;
+}
+.entryPoint:hover{
+    transform: scale(1.05);
+}
+.navPoints a:hover{
+    transform: scale(1.2);
+    color: var(--InteractiveColor);
+}
+
 
 /* Index */
 /* Fedt */
@@ -841,23 +853,6 @@ p.readMore{
         background-image: url("../img/hero/heroLarge/KalenderHeroL.jpg")
     }
 
-    .navPoints a:hover{
-        transform: scale(1.2);
-        color: var(--InteractiveColor);
-        transition: transform 0.3s ease;
-    }
-    
-    /* For at kunne få vores element til at skifte farve laver vi et pseudo element oveni det, som har den ønskede farve */
-    .entryPoint:hover::before{
-        background-color: rgba(211, 65, 52, 0.5) ;
-    }
-    
-    .entryPoint:hover{
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-    
-
     /* Main */
     main{
         margin-left: 10vw;
@@ -1194,4 +1189,42 @@ p.readMore{
         display: flex;
         /* gap: var(--generalDistance); */
     }
+}
+
+.galleryImg{
+    cursor: pointer
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    padding-top: 10vh;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.modalContent{
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 80vw;
+    height: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+.modalclose{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--textColor);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.modalclose:hover{
+    color: var(--highlightColor);
 }
