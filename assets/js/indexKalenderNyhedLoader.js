@@ -37,7 +37,7 @@ Promise.all(fetchRequests)
             return months[monthIndex];
         }
 
-        // Initialized a render function
+        // Initializes a render function
         function renderEvent(event) {
             const {dato, event_navn, start_tid, slut_tid, placering, bemaerkning} = event.acf;
             const eventDate = new Date(dato);
@@ -78,11 +78,13 @@ Promise.all(fetchRequests)
             return content;
         }
 
+        // Filters out past events
+        const upcomingEvents = category17Data.filter(event => !isDatePassed(event.acf.dato));
         // Sorts the data to make sure the the events that comes the soonest, in terms of the date, is first in the array (so that it's shown first)
-        category17Data.sort((a, b) => new Date(a.acf.dato) - new Date(b.acf.dato));
-        category17Data = category17Data.slice(0, 3);
+        upcomingEvents.sort((a, b) => new Date(a.acf.dato) - new Date(b.acf.dato));
         let eventContent = '';
-        category17Data.forEach(event => {
+        // Limits the data to the first 3 upcoming events
+        upcomingEvents.slice(0, 3).forEach(event => {
             eventContent += renderEvent(event);
         });
         calendarContainerEl.innerHTML = eventContent;
@@ -96,11 +98,11 @@ Promise.all(fetchRequests)
         });
         nyhedContainerEl.innerHTML = newsContent;
 
-        // Initialized a render function
+        // Initializes a render function
         function renderNyheder(nyhed) {
             const {nyhed_billede_1, upload_dato, titel} = nyhed.acf;
 
-            // Sets up the a template for semantic structure of the content
+            // Sets up a template for semantic structure of the content
             let content = 
             `<article class="newsBig">
                 <a href="./nyhedFocused.html?id=${nyhed.id}">
